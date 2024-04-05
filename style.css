@@ -94,7 +94,7 @@ html {
   color: #ffffff;
   font-size: 60px;
   margin: 5px 0 5px 0;
-  margin-bottom: -22px;
+  margin-bottom: -12px;
 }
 
 .game-buttons-container {
@@ -104,7 +104,7 @@ html {
   max-width: 80vmin;
   align-items: baseline;
   margin-bottom: 10px;
-  margin-bottom: -22px;
+  margin-bottom: -12px;
 }
 
 .game-player-button {
@@ -116,7 +116,7 @@ html {
   border: none;
   cursor: pointer;
   position: relative;
-  left: -17px;
+  /* left: -17px;*/
 }
 
 .title-button {
