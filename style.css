@@ -6,7 +6,7 @@
 
 html {
   height: 100vh;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 50px;
   margin: 0;
   color: #ffffff;
@@ -116,7 +116,6 @@ html {
   border: none;
   cursor: pointer;
   position: relative;
-  /* left: -17px;*/
 }
 
 .title-button {
@@ -127,13 +126,10 @@ html {
   font-weight: bolder;
 }
 
-.button-circle {
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border-radius: 27px;
-  background-color: transparent;
-  border: solid 3px white;
+#nowPlayer {
+  width: 5vmin;
+  height: 5vmin;
+  filter: invert(100%);
 }
 
 .game-buttons {
@@ -182,7 +178,7 @@ html {
   height: 8vmin;
   background-color: #d4d4d4;
   opacity: 40%;
-  border: 0.1rem solid black;
+  border: 0.09rem solid black;
   display: block;
 }
 
@@ -191,3 +187,41 @@ html {
   background-color: white;
   cursor: pointer;
 }
+
+/* третє завдання */
+
+.game_field--circle {
+  width: 6vmin;
+  height: 6vmin;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 27px;
+  background-color: transparent;
+  border: solid 3px rgb(0, 0, 0);
+}
+
+
+.game_field--cross {
+  position: relative;
+  background-color: rgba(232, 255, 211, 0);
+}
+
+.game_field--cross::before,
+.game_field--cross::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 47%;
+  height: 80%;
+  width: 4px;
+  background-color: #04554600;
+}
+
+.game_field--cross::before {
+  transform: rotate(45deg);
+}
+
+.game_field--cross::after {
+  transform: rotate(-45deg);
+}
+
+

@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hra</title>
+    <title>❌⭕Hra⭕❌</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"/>
     <link rel="stylesheet" href="style.css"/>
+    <script src="hra.js" type="module"></script>
   </head>
   <body class="body game-body">
     <h1 class="game-main-title">Piškvorky</h1>
-    <div class="game-buttons-container">
-      <button class="game-player-button">
-        <p class="title-button">Hraje:</p>
-        <div class="button-circle"></div>
-      </button>
+    <div class="game-buttons-container"> 
+      <div class="game-player-button">
+        <p class="title-button" id="turn">Hraje:</p>
+        <img id="nowPlayer" src="obrazky/circle.svg" />
+      </div>
       <div class="game-buttons">
         <button class="game-button-home">
           <a class="home-button" href="index.html">
@@ -28,7 +29,7 @@
                 fill="#fff"/></svg></a>
         </button>
 
-        <button class="game-button-restart">
+          <button class="game-button-restart" id="restart-game">
           <a class="button-game" href="hra.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,106 +43,107 @@
     </div>
 
     <div class="grid">
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
-      <div class="item-grid"><button class="cell-grid"></button></div>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <!-- кінець -->
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
+      <button class="cell-grid"></button>
     </div>
   </body>
 </html>
