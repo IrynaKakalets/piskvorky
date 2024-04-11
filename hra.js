@@ -1,4 +1,3 @@
-
 let currentPlayer = 'circle';
 
 const playerSwitch = (event) => {
@@ -51,8 +50,6 @@ document
 document
   .querySelector('button:nth-child(10)')
   .addEventListener('click', playerSwitch);
-
-
 
 const gameRestart = document.getElementById('restart-game');
 gameRestart.addEventListener('click', function (event) {
