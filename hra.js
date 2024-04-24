@@ -1,3 +1,4 @@
+// Import fuknce FindWinner
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
 let currentPlayer = 'circle'; //Гру починає 'o'
@@ -18,7 +19,6 @@ gameRestart.addEventListener('click', function (event) {
         .querySelector('#nowPlayer')
         .classList.remove('board__field--circle');
       document.querySelector('#nowPlayer').classList.add('board__field--cross');
-
   } else if (currentPlayer === 'cross') {
       e.target.classList.add('board__field--cross');
       currentPlayer = 'circle';
@@ -28,7 +28,7 @@ gameRestart.addEventListener('click', function (event) {
       document.querySelector('#nowPlayer').classList.add('board__field--circle');
     }
     e.target.disabled = true;
-    
+
 // Vytvoření pole
 const gameField = document.querySelectorAll('button');
 const gameFieldButtonsAll = Array.from(gameField).map((button) => {
@@ -41,8 +41,28 @@ const gameFieldButtonsAll = Array.from(gameField).map((button) => {
     return '_';
   });
 
- //Перевірка чи виграв х чи о чи нічия - скорочення функції findWinner
+// Перевірка, чи є хід гравця 'x' player - fetch
+const fields = document.querySelectorAll('button');
+fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+  method: 'POST',
+  headers: {
+    'Content-type': 'application/json',
+  },
+  body: JSON.stringify({
+    board: gameFieldButtonsAll,
+    player: 'x', // хід для хрестика
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    if (currentPlayer === 'cross') {
+      const { x, y } = data.position;
+      const field = fields[x + y * 10];
+      field.click();
+    }
+  });
 
+ //Перевірка чи виграв х чи о чи нічия - скорочення функції findWinner
  const winner = findWinner(gameField);
  if ((winner === 'o') | (winner === 'x')) {
    setTimeout(() => {
